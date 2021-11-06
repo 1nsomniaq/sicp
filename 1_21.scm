@@ -4,11 +4,6 @@
 (define (square x) 
 	(* x x))
 
-(define (remainder a b)
-	(if (< a b)
-	     a
-	     (remainder (- a b) b)))
-
 (define (divide? a b)
 	( = (remainder b a) 0 ))
 
@@ -20,3 +15,4 @@
 (find-div 199)
 (find-div 1999)
 (find-div 19999)
+
