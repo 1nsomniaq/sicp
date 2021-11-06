@@ -47,3 +47,5 @@
 (search-for-primes 100001)
 (search-for-primes 1000001)
 (search-for-primes 100000001)
+(search-for-primes 100000000001)
+(search-for-primes 1000000000001)
