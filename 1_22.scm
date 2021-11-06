@@ -49,3 +49,8 @@
 (search-for-primes 100000001)
 (search-for-primes 100000000001)
 (search-for-primes 1000000000001)
+
+
+; 100000000001 takes .24 sec
+; 1000000000001 takes .73 sec
+; .73/.24 approx = 3
