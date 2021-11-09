@@ -12,8 +12,8 @@
 (define (expmod base exp m)
 	(cond ((= exp 0 ) 1)
 		  ((even? exp) (if (and (= 1 (remainder (square (expmod base (/ exp 2) m)) m))
-		                   		(= exp (- m 1))
-		                   		(= (- exp 1) 1))
+		                   		(not (= (expmod base (/ exp 2) m) 1))
+		                   		(not (= (expmod base (/ exp 2) m) (- m 1))))
 		  	             0
 		  	             (remainder (square (expmod base (/ exp 2) m)) m)))
 		  (else (remainder (* base (expmod base (- exp 1) m)) m))))
@@ -35,7 +35,7 @@
 
 ; even
 (prime? 100)
-(prime? 11122)
+(prime? 122)
 (prime? 32)
 
 ; primes
