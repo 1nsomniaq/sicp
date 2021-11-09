@@ -33,3 +33,9 @@
 (timed-prime-test 2465)
 (timed-prime-test 2821)
 (timed-prime-test 66601)
+
+
+
+(timed-prime-test 100)
+(timed-prime-test 11122)
+(timed-prime-test 32)
