@@ -9,13 +9,16 @@
 (define (miller-rabin-test n curr)
 		(= (expmod curr (- n 1) n) 1))
 
+(define (non-trivial n root)
+	(if (and (= 1 (remainder (square root) n))
+		     (not (= root 1))
+		     (not (= root (- n 1))))
+		 0
+		 (remainder (square root) n)))
+
 (define (expmod base exp m)
 	(cond ((= exp 0 ) 1)
-		  ((even? exp) (if (and (= 1 (remainder (square (expmod base (/ exp 2) m)) m))
-		                   		(not (= (expmod base (/ exp 2) m) 1))
-		                   		(not (= (expmod base (/ exp 2) m) (- m 1))))
-		  	             0
-		  	             (remainder (square (expmod base (/ exp 2) m)) m)))
+		  ((even? exp) (non-trivial m (expmod base (/ exp 2) m)))
 		  (else (remainder (* base (expmod base (- exp 1) m)) m))))
 
 (prime? 1)
