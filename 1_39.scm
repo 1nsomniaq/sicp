@@ -21,16 +21,18 @@
 	(iter (n k) (d k) k))
 
 
-
-; 1.61803
-(cont-frac (lambda (i) 1.0) 
-	(lambda (i) 1.0)
-    5)
-
-; в чем инвариант??
-
-(iter-cont-frac (lambda (i) 1.0) 
-	(lambda (i) 1.0)
-    5)
+(define (tan-cf x k)
+	(iter-cont-frac (lambda (i) (if (= i 1 ) x (* ( - x) x)))
+			   (lambda (i) (- (* 2 i) 1.0))
+			   k			
+		)
+	)
 
 
+
+(tan-cf 1 100)
+
+
+((lambda (i) (- (* 2 i) 1.0)) 2)
+
+((lambda (i) (if (= i 1 ) 1 (* 1 1))) 1)

@@ -22,15 +22,32 @@
 
 
 
-; 1.61803
 (cont-frac (lambda (i) 1.0) 
-	(lambda (i) 1.0)
-    5)
+	(lambda (i) (if (= (remainder i 3) 2)
+	 				 (* 2 
+	 				    (+ 1
+	 				     (/ (- i 2)
+	 				     	3)))
+	 				 1  
+	 				 ))
+    100)
 
-; в чем инвариант??
 
 (iter-cont-frac (lambda (i) 1.0) 
-	(lambda (i) 1.0)
-    5)
+	(lambda (i) (if (= (remainder i 3) 2)
+	 				 (* 2 
+	 				    (+ 1
+	 				     (/ (- i 2)
+	 				     	3)))
+	 				 1  
+	 				 ))
+    100)
 
 
+((lambda (i) (if (= (remainder i 3) 2)
+	 				 (* 2 
+	 				    (+ 1
+	 				     (/ (- i 2)
+	 				     	3)))
+	 				 1  
+	 				 )) 1)
