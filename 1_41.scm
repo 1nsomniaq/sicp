@@ -8,7 +8,4 @@
 ((double inc) 3)
 
 
-
-
-
 (((double (double double)) inc) 5)
