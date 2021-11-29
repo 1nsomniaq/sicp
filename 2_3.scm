@@ -35,6 +35,7 @@
 	(cdr x))
 
 (define (length-segment x)
+	; parallel to oxis only!
 	(let ((a (start-segment x))
 		  (b (end-segment x)))
 	(if (= (x-point a) (x-point b))

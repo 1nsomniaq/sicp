@@ -2,7 +2,9 @@
 
 
 (define (smooth f)
-	(lambda (x) (/ (+ (f x) (f (- x dx)) (f (+ x dx)))
+	(lambda (x) (/ (+ (f x)
+				      (f (- x dx))
+				      (f (+ x dx)))
 		     		3)))
 
 (define (compose f g)

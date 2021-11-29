@@ -43,6 +43,4 @@
 	(make-point (average (x-point start) (x-point end))
 	            (average (y-point start) (y-point end)))))
 
-
-
 (print-point (midpoint-segment segment))

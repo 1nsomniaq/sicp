@@ -15,7 +15,6 @@
   ; ((lambda (m) (m x y)) (lambda (p q) p))) 
 
 
-
 ; (define (car z)
   ; (lambda (p q) p) x y))
 
