@@ -19,6 +19,3 @@ one-through-four
 (define one-three (list 1 2 3))
 
 (reverse one-three)
-
-(list)
-(reverse (list))
